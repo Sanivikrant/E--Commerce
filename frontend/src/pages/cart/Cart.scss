@@ -1,0 +1,113 @@
+$primary-color: #4caf50;
+$remove-color: #f44336;
+$remove-hover-color: #d32f2f;
+$text-light: #f4f4f4;
+$border-color: #ddd;
+$image-size: 50px;
+
+
+.cartt{
+  min-height: 87.5vh;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cart-page {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.5rem;
+  // max-width: 1000px;
+  // margin: 0 auto;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th, td {
+      border: 1px solid $border-color;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: $text-light;
+    }
+
+    .item-image {
+      width: $image-size;
+      height: $image-size;
+      object-fit: cover;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+
+      .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid $border-color;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+
+      .quantity-display {
+        margin: 0 10px;
+        font-size: 16px;
+        width: 30px;
+        text-align: center;
+      }
+    }
+
+    .remove-button {
+      background-color: $remove-color;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $remove-hover-color;
+      }
+    }
+  }
+
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      margin: 0;
+    }
+
+    .checkout-button {
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
